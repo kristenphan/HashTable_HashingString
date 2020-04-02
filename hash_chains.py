@@ -39,8 +39,8 @@ class Node:
 # find: return yes if a particular string is found in the hash table. otherwise, return no
 # check: return a chain in the hash table associated with the passed in index. if the chain is empty, return a blank line
 class QueryProcessor:
-    _multiplier = 263
-    _prime = 1000000007
+    _multiplier = 263 # given as part of the assignment
+    _prime = 1000000007 # given as part of the assignment
 
     # this method initializes a hash table using the passed in bucket_count
     # the value of bucket_count is the cardinallity of the hash table and is the same as the number of chains in the hash table
@@ -212,15 +212,14 @@ class QueryProcessor:
 
     # this method reads the input that contains all queries and subsequently calls in process_query() method to process individual queries
     def process_queries(self):
-        n = 96
-        fname = '06'
+       fname = '06'
         with open(fname, 'r') as testfile:
             queries = []
             for line in testfile.readlines():
                 line = line.strip()
                 if line != '\n':
                     queries.append(Query(line.split()))
-
+        n = len(queries)
         for i in range(n):
             self.process_query(queries[i])
             #chain_lst = self.chain_lst()
@@ -228,7 +227,7 @@ class QueryProcessor:
 
 
 if __name__ == '__main__':
-    bucket_count = 43
+    bucket_count = 43 # given as part of the assignment
     proc = QueryProcessor(bucket_count)
     proc.process_queries()
 
