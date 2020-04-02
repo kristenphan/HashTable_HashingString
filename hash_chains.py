@@ -1,5 +1,5 @@
 # python3
-import ctypes
+
 
 # this class stores the data for each query
 # 3 query types: add, del, find, deck
@@ -32,7 +32,7 @@ class Node:
 
 # this class contains the properties and methods to initialize a hash table
 # and process a series of queries to modify the hash table
-# this hash table is implementing using chaining
+# this hash table is implementing using chaining technique but not dynamic array as the size of the hash table is fixed (bucket_count = 43)
 # 4 type of queries:
 # add: add a string to the hash table. if said string already exists, ignore the query
 # del: remove a string from the hash table. if said string does not exist, ignore the query
